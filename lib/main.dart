@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
               createChild(noteId: 4, colorVal: Colors.teal),
               createChild(noteId: 5, colorVal: Colors.blue),
               createChild(noteId: 6, colorVal: Colors.green),
-              createChild(noteId: 7, colorVal: Colors.purple),
+              createChild(noteId: 7, colorVal: Colors.black),
             ],
           ),
         ),
