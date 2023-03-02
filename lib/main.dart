@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
   int sendNote = 1;
 
@@ -17,14 +17,14 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  Expanded createChild({int noteId = 1, required Color colorVal}) {
+  Widget createChild({int noteId = 1, required Color colorVal}) {
     return Expanded(
       child: ElevatedButton(
         onPressed: () async {
           playNote(noteId);
         },
-        style: const ButtonStyle(
-          backgroundColor: MaterialStatePropertyAll(colorVal),
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(colorVal),
         ),
         child: null,
       ),
@@ -45,7 +45,13 @@ class MyApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              //  createChild(sendNote = 1, colorVal: Colors.black),
+              createChild(noteId: 1, colorVal: Colors.red),
+              createChild(noteId: 2, colorVal: Colors.yellow),
+              createChild(noteId: 3, colorVal: Colors.orange),
+              createChild(noteId: 4, colorVal: Colors.teal),
+              createChild(noteId: 5, colorVal: Colors.blue),
+              createChild(noteId: 6, colorVal: Colors.green),
+              createChild(noteId: 7, colorVal: Colors.purple),
             ],
           ),
         ),
