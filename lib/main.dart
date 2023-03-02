@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
@@ -39,7 +37,12 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.black,
           centerTitle: true,
-          title: const Text('Xylophone'),
+          title: const Text(
+            'XyloPhone',
+            style: TextStyle(
+              fontFamily: 'Pacifico',
+            ),
+          ),
         ),
         body: SafeArea(
           child: Column(
@@ -51,7 +54,7 @@ class MyApp extends StatelessWidget {
               createChild(noteId: 4, colorVal: Colors.teal),
               createChild(noteId: 5, colorVal: Colors.blue),
               createChild(noteId: 6, colorVal: Colors.green),
-              createChild(noteId: 7, colorVal: Colors.black),
+              createChild(noteId: 7, colorVal: Colors.purple),
             ],
           ),
         ),
